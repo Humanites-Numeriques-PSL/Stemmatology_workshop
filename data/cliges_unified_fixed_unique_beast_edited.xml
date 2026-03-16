@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beast version="2.7" namespace="beast.pkgmgmt:beast.base.core:beast.base.inference:beast.base.inference.distribution:beast.base.inference.util:beast.base.evolution:beast.base.evolution.alignment:beast.base.evolution.datatype:beast.base.evolution.tree:beast.base.evolution.tree.coalescent:beast.base.evolution.branchratemodel:beast.evolution.nuc:beast.base.evolution.operator:beast.evolution.nuc:beast.base.evolution.operator.kernel:beast.base.inference.operator:beast.base.inference.operator.kernel:beast.base.evolution.sitemodel:beast.base.evolution.substitutionmodel:beast.base.evolution.likelihood">
+    <data spec="Alignment" id="alignment" dataType="standard" statecount="3">
+        <!-- Start witness sequences -->
+        <sequence spec="Sequence" taxon="A" uncertain="true" value="0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 0, 1; 1, 0, 0; 1, 0; 1, 0; 0, 1; 1, 0, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 0, 1; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0"/>
+        <sequence spec="Sequence" taxon="B" uncertain="true" value="0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 0, 1; 0, 0, 1; 0, 1; 1, 0; 1, 0; 1, 0, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 1, 0; 0, 1, 0; 0, 1"/>
+        <sequence spec="Sequence" taxon="P" uncertain="true" value="1, 0; 1, 0; 1, 0; 0, 1; 1, 0; 1, 0; 0, 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0; 0, 1; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0"/>
+        <sequence spec="Sequence" taxon="C" uncertain="true" value="1, 0; 1, 0; 0, 1; 1, 0; 1, 0; 1, 1; 1, 0, 0; 1, 0; 0, 1; 1, 0; 1, 0, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0"/>
+        <sequence spec="Sequence" taxon="R" uncertain="true" value="0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0; 0, 1; 1, 0; 0, 0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0; 1, 0, 0; 1, 0"/>
+        <sequence spec="Sequence" taxon="S" uncertain="true" value="0, 1; 0, 1; 1, 0; 1, 0; 0, 1; 1, 1; 1, 1, 1; 1, 0; 0, 1; 1, 0; 0, 1, 0; 1, 0; 1, 0; 0, 1; 0, 1; 0, 1; 0, 1; 1, 0; 1, 0; 1, 0; 0, 1; 0, 1; 0, 1; 0, 1; 0, 0, 1; 1, 0"/>
+        <userDataType spec="StandardData" nrOfStates="3">
+            <!-- Start variation unit and state labels -->
+            <charstatelabels spec="UserDataType" characterName="l-14_2" states="2" codeMap="0=0, 1=1, ?=0 1" value="haut, fier"/>
+            <charstatelabels spec="UserDataType" characterName="l-14_3" states="2" codeMap="0=0, 1=1, ?=0 1" value="parage, corage"/>
+            <charstatelabels spec="UserDataType" characterName="l-19_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., m_oez"/>
+            <charstatelabels spec="UserDataType" characterName="l-30_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="Ce, Or"/>
+            <charstatelabels spec="UserDataType" characterName="l-40_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="l_avoit, dont_ele_est_prisee_et_dotee"/>
+            <charstatelabels spec="UserDataType" characterName="l-40_4" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., om."/>
+            <charstatelabels spec="UserDataType" characterName="l-40_7" states="3" codeMap="0=0, 1=1, 2=2, ?=0 1 2" value="prestee, donee, paree"/>
+            <charstatelabels spec="UserDataType" characterName="l-41_4" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., francois"/>
+            <charstatelabels spec="UserDataType" characterName="l-46_3" states="2" codeMap="0=0, 1=1, ?=0 1" value="livres, estoire"/>
+            <charstatelabels spec="UserDataType" characterName="l-50_3" states="2" codeMap="0=0, 1=1, ?=0 1" value="molt, cointe_et"/>
+            <charstatelabels spec="UserDataType" characterName="l-61_3" states="3" codeMap="0=0, 1=1, 2=2, ?=0 1 2" value="om., cantal, et_d_aliz"/>
+            <charstatelabels spec="UserDataType" characterName="l-64_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="D, et_apres"/>
+            <charstatelabels spec="UserDataType" characterName="l-65_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., orgilleus"/>
+            <charstatelabels spec="UserDataType" characterName="l-69_4" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., vivoit"/>
+            <charstatelabels spec="UserDataType" characterName="l-72_7" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., renome"/>
+            <charstatelabels spec="UserDataType" characterName="l-72_10" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., torz"/>
+            <charstatelabels spec="UserDataType" characterName="l-74_2" states="2" codeMap="0=0, 1=1, ?=0 1" value="que_la_fin, quel_ains"/>
+            <charstatelabels spec="UserDataType" characterName="l-77_1" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., el_mont"/>
+            <charstatelabels spec="UserDataType" characterName="l-77_12" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., alt"/>
+            <charstatelabels spec="UserDataType" characterName="l-78_3" states="2" codeMap="0=0, 1=1, ?=0 1" value="est, convient"/>
+            <charstatelabels spec="UserDataType" characterName="l-79_4" states="2" codeMap="0=0, 1=1, ?=0 1" value="aille, able"/>
+            <charstatelabels spec="UserDataType" characterName="l-84_6" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., vieuz"/>
+            <charstatelabels spec="UserDataType" characterName="l-85_7" states="2" codeMap="0=0, 1=1, ?=0 1" value="et, canpandre"/>
+            <charstatelabels spec="UserDataType" characterName="l-92_8" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., crevez"/>
+            <charstatelabels spec="UserDataType" characterName="l-95_1" states="3" codeMap="0=0, 1=1, 2=2, ?=0 1 2" value="Doit, velt, voit"/>
+            <charstatelabels spec="UserDataType" characterName="l-95_2" states="2" codeMap="0=0, 1=1, ?=0 1" value="om., amer"/>
+        </userDataType>
+    </data>
+    <tree spec="Tree" id="tree">
+        <trait spec="TraitSet" traitname="date" units="year" value="A=1230,B=1238,P=1288,C=1250,R=1230,S=1225">
+            <taxa spec="TaxonSet" id="taxa" alignment="@alignment"/>
+        </trait>
+        <taxonset spec="TaxonSet" idref="taxa"/>
+    </tree>
+    <birthDeathSkylineModel spec="bdsky.evolution.speciation.BirthDeathSkylineModel" id="birthDeath" tree="@tree">
+        <origin spec="parameter.RealParameter" id="origin" lower="107" upper="116" value="107"/>
+        <!--<!-\- The reciprocal of the expected waiting time (in years) before a manuscript is copied -\->
+        <birthRate spec="parameter.RealParameter" id="birthRate" lower="0.0" upper="0.050" value="0.020"/>
+        <!-\- The reciprocal of the expected waiting time (in years) before a manuscript is lost -\->
+        <deathRate spec="parameter.RealParameter" id="deathRate" lower="0.0" upper="0.020" value="0.005"/>
+        <!-\- The reciprocal of the expected waiting time (in years) before a manuscript is copied and goes on to be preserved -\->
+        <samplingRate spec="parameter.RealParameter" id="samplingRate" lower="0.0" upper="0.050" value="0.010"/>-->
+        <!-- JBC: Changing all this to allow for different periods -->
+        <!-- Using rates inspired by Godreau & Camps 2025, 
+            https://anthology.ach.org/volumes/vol0003/why-do-older-books-survive-sometimes-modelling-of/10.63744@c4L67UxjQVI3.pdf -->
+        <!-- 
+            SUMMARY of dates, for conveniency:
+            year 0:     1288
+            year 107:   1181
+            
+            so, roughly:
+            
+            year 0:     1288 to year 20, lambda 0.085, mu 0.08, 
+            year 20     1268 to year 55, lambda 0.09 , mu 0.075,
+            year 55     1233 to year 88, lambda 0.085, mu 0.07
+            year 88     1200 to year107, lambda 0.06 , mu 0.04
+            year 107:   1181
+        
+        -->
+        <!-- Times at which rates change (measured starting from the present and moving backwards in time) -->
+        <intervalTimes spec="parameter.RealParameter" id="intervalTimes" value="0.0 20.0 55.0 88.0"/>
+        <reverseTimeArrays spec="parameter.BooleanParameter" id="reverseTimeArrays" value="true true true true true"/>
+        <!-- The reciprocal of the expected waiting time (in years) before a manuscript is copied -->
+        <birthRate spec="parameter.CompoundRealParameter" id="birthRate">
+            <parameter spec="parameter.RealParameter" id="birthRate.1" lower="0.065" upper="0.105" value="0.085"/>
+            <parameter spec="parameter.RealParameter" id="birthRate.2" lower="0.070" upper="0.120" value="0.090"/>
+            <parameter spec="parameter.RealParameter" id="birthRate.3" lower="0.065" upper="0.105" value="0.085"/>
+            <parameter spec="parameter.RealParameter" id="birthRate.4" lower="0.040" upper="0.120" value="0.060"/>
+        </birthRate>
+        <!-- The reciprocal of the expected waiting time (in years) before a manuscript is lost -->
+        <deathRate spec="parameter.CompoundRealParameter" id="deathRate">
+            <parameter spec="parameter.RealParameter" id="deathRate.1" lower="0.060" upper="0.100" value="0.080"/>
+            <parameter spec="parameter.RealParameter" id="deathRate.2" lower="0.055" upper="0.095" value="0.075"/>
+            <parameter spec="parameter.RealParameter" id="deathRate.3" lower="0.050" upper="0.090" value="0.070"/>
+            <parameter spec="parameter.RealParameter" id="deathRate.4" lower="0.020" upper="0.080" value="0.040"/>
+        </deathRate>
+        <!-- The reciprocal of the expected waiting time (in years) before a manuscript is copied that goes on to be preserved -->
+        <samplingRate spec="parameter.RealParameter" id="samplingRate" lower="0.001" upper="0.05" value="0.025 0.025 0.025 0.025"/>
+        <!--<samplingRate spec="parameter.CompoundRealParameter" id="samplingRate">
+            <parameter spec="parameter.RealParameter" id="samplingRate.1" lower="0.0" upper="0.01" value="0.08"/>
+            <parameter spec="parameter.RealParameter" id="samplingRate.2" lower="0.0" upper="0.03" value="0.015"/>
+            <parameter spec="parameter.RealParameter" id="samplingRate.3" lower="0.0" upper="0.03" value="0.015"/>
+            <parameter spec="parameter.RealParameter" id="samplingRate.4" lower="0.0" upper="0.005" value="0.002"/>
+        </samplingRate>-->
+    </birthDeathSkylineModel>
+    <!-- JBC: also changing this to fit the different epochs -->
+    <branchRateModel spec="epochclock.evolution.branchratemodel.EpochClockModel" id="clock">
+        <!-- The base clock rate corresponds to the expected number of errors per site for each copying event -->
+        <clock.rate spec="parameter.RealParameter" id="clockRate" value="0.01" lower="0.001" upper="0.5"/>
+        <epochTimeTops spec="parameter.RealParameter" id="epochTimeTops" value="20.0 55.0 88.0"/>
+        <relativeRates spec="parameter.CompoundRealParameter" id="relativeRates">
+            <parameter idref="birthRate.4"/>
+            <parameter idref="birthRate.3"/>
+            <parameter idref="birthRate.2"/>
+            <parameter idref="birthRate.1"/>
+        </relativeRates>
+    </branchRateModel>
+    <!-- The chainLength attribute should be increased to a large number (e.g., 20000000) for non-test runs -->
+    <run spec="MCMC" id="mcmc" chainLength="100000">
+            <!--<init spec="ClusterTree" id="initialTree" initial="@tree" clusterType="upgma" taxa="@alignment"/>-->
+            <!--<init spec="ClusterTree" id="initialTree" initial="@tree" clusterType="ward" taxa="@alignment"/>-->
+            <!--<init spec="ClusterTree" id="initialTree" initial="@tree" clusterType="random" taxa="@alignment"/>-->
+            <!-- JBC: trying random initialisation -->
+            <init id="SimpleRandomTree" spec="beastlabs.evolution.tree.SimpleRandomTree" taxa="@alignment" initial="@tree"/>
+            
+            <state spec="State" id="state" storeEvery="5000">
+                <stateNode idref="tree"/>
+                <!-- Start Birth-Death Skyline model parameters -->
+                <stateNode idref="origin"/>
+                <stateNode idref="birthRate.1"/>
+                <stateNode idref="birthRate.2"/>
+                <stateNode idref="birthRate.3"/>
+                <stateNode idref="birthRate.4"/>
+                <stateNode idref="deathRate.1"/>
+                <stateNode idref="deathRate.2"/>
+                <stateNode idref="deathRate.3"/>
+                <stateNode idref="deathRate.4"/>
+                <stateNode idref="samplingRate"/>
+                <!-- Start clock parameters -->
+                <stateNode idref="clockRate"/>
+                <!-- Start intrinsic odds parameters -->
+                
+                <!-- Start transcriptional rate parameters -->
+                <stateNode spec="parameter.RealParameter" id="lexsemstrong_rate" lower="0.0" upper="Infinity" value="10.712733434686214" estimate="true"/>
+                <stateNode spec="parameter.RealParameter" id="lexsemweak_rate" lower="0.0" upper="Infinity" value="12.96559646539868" estimate="true"/>
+                <stateNode spec="parameter.RealParameter" id="lexsemnonsense_rate" lower="0.0" upper="Infinity" value="9.896634090182586" estimate="true"/>
+                <stateNode spec="parameter.RealParameter" id="order_rate" lower="0.0" upper="Infinity" value="9.26093205982762" estimate="true"/>
+                <stateNode spec="parameter.RealParameter" id="absence_rate" lower="0.0" upper="Infinity" value="13.671646862127318" estimate="true"/>
+                <!-- We include a "default" rate fixed at 1 that corresponds to (unlikely) transitions with no transcriptional explanation.
+            All other rates in the substitution matrices will be estimated relative to this.
+            If no other transcriptional rate parameters are specified, then the substitution matrices will correspond to those of the Lewis Mk model. -->
+                <stateNode spec="parameter.RealParameter" id="default_rate" value="1.0" estimate="false"/>
+            </state>
+            <distribution spec="CompoundDistribution" id="posterior">
+                <distribution spec="CompoundDistribution" id="prior">
+                    <!-- Priors for the Birth-Death Skyline model -->
+                    <distribution spec="CompoundDistribution" id="bdLikelihood">
+                        <distribution idref="birthDeath"/>
+                    </distribution>
+                    <distribution spec="Prior" id="originPrior" x="@origin">
+                        <distr spec="beast.base.inference.distribution.Uniform" lower="107" upper="116"/>
+                    </distribution>
+                    <!-- Priors for the clock model parameters -->
+                    <distribution spec="Prior" id="clockRatePrior" x="@clockRate">
+                        <distr spec="LogNormalDistributionModel" M="-6.0" S="1.0"/>
+                    </distribution>
+                    <!-- Priors for transcriptional rate parameters -->
+                    <!-- JBC: they are all between 7 and 14 in the posterior, so I am adjusting them -->
+                    <!--<distribution spec="Prior" id="lexsemstrong_ratePrior" x="@lexsemstrong_rate">
+                    <distr spec="Gamma" alpha="5.0" beta="2.0"/>
+                </distribution>
+                <distribution spec="Prior" id="lexsemweak_ratePrior" x="@lexsemweak_rate">
+                    <distr spec="Gamma" alpha="5.0" beta="2.0"/>
+                </distribution>
+                <distribution spec="Prior" id="lexsemnonsense_ratePrior" x="@lexsemnonsense_rate">
+                    <distr spec="Gamma" alpha="5.0" beta="2.0"/>
+                </distribution>
+                <distribution spec="Prior" id="order_ratePrior" x="@order_rate">
+                    <distr spec="Gamma" alpha="5.0" beta="2.0"/>
+                </distribution>
+                <distribution spec="Prior" id="absence_ratePrior" x="@absence_rate">
+                    <distr spec="Gamma" alpha="5.0" beta="2.0"/>
+                </distribution>-->
+                    <distribution spec="Prior" id="lexsemstrong_ratePrior" x="@lexsemstrong_rate">
+                        <distr spec="Gamma" alpha="105.0" beta="10.0"/>
+                    </distribution>
+                    <distribution spec="Prior" id="lexsemweak_ratePrior" x="@lexsemweak_rate">
+                        <distr spec="Gamma" alpha="105.0" beta="10.0"/>
+                    </distribution>
+                    <distribution spec="Prior" id="lexsemnonsense_ratePrior" x="@lexsemnonsense_rate">
+                        <distr spec="Gamma" alpha="105.0" beta="10.0"/>
+                    </distribution>
+                    <distribution spec="Prior" id="order_ratePrior" x="@order_rate">
+                        <distr spec="Gamma" alpha="105.0" beta="10.0"/>
+                    </distribution>
+                    <distribution spec="Prior" id="absence_ratePrior" x="@absence_rate">
+                        <distr spec="Gamma" alpha="105.0" beta="10.0"/>
+                    </distribution>
+                    <!-- Priors for witness dates -->
+                    <distribution id="date.A" spec="MRCAPrior" tipsonly="true" tree="@tree">
+                        <taxonset id="taxonSet.A" spec="TaxonSet">
+                            <taxon id="A" spec="Taxon"/>
+                        </taxonset>
+                        <distr spec="beast.base.inference.distribution.Uniform" id="datePrior.A.Uniform" lower="1226" upper="1235"/>
+                    </distribution>
+                    <distribution id="date.B" spec="MRCAPrior" tipsonly="true" tree="@tree">
+                        <taxonset id="taxonSet.B" spec="TaxonSet">
+                            <taxon id="B" spec="Taxon"/>
+                        </taxonset>
+                        <distr spec="beast.base.inference.distribution.Uniform" id="datePrior.B.Uniform" lower="1226" upper="1250"/>
+                    </distribution>
+                    <distribution id="date.C" spec="MRCAPrior" tipsonly="true" tree="@tree">
+                        <taxonset id="taxonSet.C" spec="TaxonSet">
+                            <taxon id="C" spec="Taxon"/>
+                        </taxonset>
+                        <distr spec="beast.base.inference.distribution.Uniform" id="datePrior.C.Uniform" lower="1241" upper="1260"/>
+                    </distribution>
+                    <distribution id="date.R" spec="MRCAPrior" tipsonly="true" tree="@tree">
+                        <taxonset id="taxonSet.R" spec="TaxonSet">
+                            <taxon id="R" spec="Taxon"/>
+                        </taxonset>
+                        <distr spec="beast.base.inference.distribution.Uniform" id="datePrior.R.Uniform" lower="1201" upper="1260"/>
+                    </distribution>
+                    <distribution id="date.S" spec="MRCAPrior" tipsonly="true" tree="@tree">
+                        <taxonset id="taxonSet.S" spec="TaxonSet">
+                            <taxon id="S" spec="Taxon"/>
+                        </taxonset>
+                        <distr spec="beast.base.inference.distribution.Uniform" id="datePrior.S.Uniform" lower="1201" upper="1250"/>
+                    </distribution>
+                </distribution>
+            <distribution spec="CompoundDistribution" id="likelihood" useThreads="true">
+                <!-- Start character distributions -->
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.1" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.1" data="@alignment" filter="1">
+                        <userDataType spec="StandardData" id="morphDataType.1" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.1">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.1" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.1">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.1">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.1" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.1">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.1">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.1" value="0.9693465699682844 0.030653430031715504" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.2" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.2" data="@alignment" filter="2">
+                        <userDataType spec="StandardData" id="morphDataType.2" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.2">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.2" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.2">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.2">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.2" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.2">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.2">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.2" value="0.9693465699682844 0.030653430031715504" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.3" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.3" data="@alignment" filter="3">
+                        <userDataType spec="StandardData" id="morphDataType.3" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.3">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.3" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.3">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.3">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.3" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.3">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.3">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.3" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.4" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.4" data="@alignment" filter="4">
+                        <userDataType spec="StandardData" id="morphDataType.4" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.4">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.4" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.4">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.4">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.4" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.4">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.4">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.4" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.5" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.5" data="@alignment" filter="5">
+                        <userDataType spec="StandardData" id="morphDataType.5" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.5">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.5" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.5">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.5">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.5" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.5">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.5">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.5" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.6" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.6" data="@alignment" filter="6">
+                        <userDataType spec="StandardData" id="morphDataType.6" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.6">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.6" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.6">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.6">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.6" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.6">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.6">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.6" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.7" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.7" data="@alignment" filter="7">
+                        <userDataType spec="StandardData" id="morphDataType.7" nrOfStates="3"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.7">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.7" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.7">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.7">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.7" value="0.3333333333333333 0.3333333333333333 0.3333333333333333" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.7">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.7">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.7" value="0.9897891100998863 0.009897891100998864 0.0003129987991146811" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.8" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.8" data="@alignment" filter="8">
+                        <userDataType spec="StandardData" id="morphDataType.8" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.8">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.8" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.8">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.8">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.8" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.8">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.8">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.8" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.9" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.9" data="@alignment" filter="9">
+                        <userDataType spec="StandardData" id="morphDataType.9" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.9">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.9" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.9">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.9">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.9" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.9">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.9">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.9" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.10" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.10" data="@alignment" filter="10">
+                        <userDataType spec="StandardData" id="morphDataType.10" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.10">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.10" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.10">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.10">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.10" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.10">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.10">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.10" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.11" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.11" data="@alignment" filter="11">
+                        <userDataType spec="StandardData" id="morphDataType.11" nrOfStates="3"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.11">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.11" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.11">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.11">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.11" value="0.3333333333333333 0.3333333333333333 0.3333333333333333" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.11">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.11">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.11" value="0.99000099000099 0.0099000099000099 9.9000099000099e-05" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.12" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.12" data="@alignment" filter="12">
+                        <userDataType spec="StandardData" id="morphDataType.12" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.12">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.12" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.12">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.12">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.12" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.12">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.12">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.12" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.13" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.13" data="@alignment" filter="13">
+                        <userDataType spec="StandardData" id="morphDataType.13" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.13">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.13" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.13">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.13">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.13" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.13">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.13">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.13" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.14" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.14" data="@alignment" filter="14">
+                        <userDataType spec="StandardData" id="morphDataType.14" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.14">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.14" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.14">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.14">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.14" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.14">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.14">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.14" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.15" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.15" data="@alignment" filter="15">
+                        <userDataType spec="StandardData" id="morphDataType.15" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.15">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.15" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.15">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.15">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.15" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.15">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.15">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.15" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.16" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.16" data="@alignment" filter="16">
+                        <userDataType spec="StandardData" id="morphDataType.16" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.16">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.16" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.16">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.16">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.16" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.16">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.16">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.16" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.17" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.17" data="@alignment" filter="17">
+                        <userDataType spec="StandardData" id="morphDataType.17" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.17">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.17" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.17">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.17">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.17" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.17">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.17">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.17" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.18" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.18" data="@alignment" filter="18">
+                        <userDataType spec="StandardData" id="morphDataType.18" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.18">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.18" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.18">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.18">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.18" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.18">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.18">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.18" value="0.0 1.0" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.19" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.19" data="@alignment" filter="19">
+                        <userDataType spec="StandardData" id="morphDataType.19" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.19">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.19" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.19">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.19">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.19" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.19">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.19">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.19" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.20" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.20" data="@alignment" filter="20">
+                        <userDataType spec="StandardData" id="morphDataType.20" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.20">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.20" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.20">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.20">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.20" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.20">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.20">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.20" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.21" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.21" data="@alignment" filter="21">
+                        <userDataType spec="StandardData" id="morphDataType.21" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.21">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.21" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.21">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.21">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.21" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.21">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.21">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.21" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.22" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.22" data="@alignment" filter="22">
+                        <userDataType spec="StandardData" id="morphDataType.22" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.22">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.22" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.22">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.22">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.22" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.22">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.22">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.22" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.23" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.23" data="@alignment" filter="23">
+                        <userDataType spec="StandardData" id="morphDataType.23" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.23">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.23" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.23">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.23">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.23" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.23">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.23">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.23" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.24" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.24" data="@alignment" filter="24">
+                        <userDataType spec="StandardData" id="morphDataType.24" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.24">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.24" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.24">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.24">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.24" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.24">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.24">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.24" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.25" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.25" data="@alignment" filter="25">
+                        <userDataType spec="StandardData" id="morphDataType.25" nrOfStates="3"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.25">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.25" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.25">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.25">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.25" value="0.3333333333333333 0.3333333333333333 0.3333333333333333" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.25">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.25">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.25" value="0.99000099000099 0.0099000099000099 9.9000099000099e-05" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+                <distribution spec="TreeLikelihood" id="morphTreeLikelihood.26" useAmbiguities="true" useTipLikelihoods="true" tree="@tree">
+                    <data spec="FilteredAlignment" id="filter.26" data="@alignment" filter="26">
+                        <userDataType spec="StandardData" id="morphDataType.26" nrOfStates="2"/>
+                    </data>
+                    <siteModel spec="SiteModel" id="morphSiteModel.26">
+                        <mutationRate spec="parameter.RealParameter" id="mutationRate.26" value="1.0"/>
+                        <substModel spec="ComplexSubstitutionModel" id="substModel.26">
+                            <!-- Equilibrium frequencies -->
+                            <frequencies spec="Frequencies" id="equilibriumfreqs.26">
+                                <frequencies spec="parameter.RealParameter" id="equilibriumfrequencies.26" value="0.5 0.5" estimate="false"/>
+                            </frequencies>
+                            <rates spec="parameter.CompoundValuable" id="rates.26">
+                                <!-- Start transition rate matrix off-diagonal entries -->
+                                <var idref="default_rate"/>
+                                <var idref="default_rate"/>
+                            </rates>
+                        </substModel>
+                    </siteModel>
+                    <!-- root frequencies -->
+                    <rootFrequencies spec="Frequencies" id="rootfreqs.26">
+                        <frequencies spec="parameter.RealParameter" id="rootfrequencies.26" value="0.9900990099009901 0.009900990099009901" estimate="false"/>
+                    </rootFrequencies>
+                    <branchRateModel idref="clock"/>
+                </distribution>
+            </distribution>
+        </distribution>
+            <!-- Operators for the tree -->
+            <!-- JBC: trying something for allowing BEAST to update the weights during run -->
+            <operator spec="BactrianScaleOperator" id="treeScaler" scaleFactor="0.02" tree="@tree" weight="3.0"/>
+            <operator spec="BactrianScaleOperator" id="treeRootScaler" rootOnly="true" scaleFactor="0.018" tree="@tree" weight="3.0"/>
+            <operator spec="BactrianNodeOperator" id="treeUniformOperator" tree="@tree" scaleFactor="2" weight="12.0"/>
+            <operator spec="BactrianSubtreeSlide" id="treeSubtreeSlide" tree="@tree" weight="5.0"/>
+            <operator spec="Exchange" id="treeNarrowExchange" tree="@tree" weight="10.0"/>
+            <!-- JBC: These two have very low acceptance rates -->
+            <!--<operator spec="Exchange" id="treeWideExchange" isNarrow="false" tree="@tree" weight="3.0"/>
+        <operator spec="WilsonBalding" id="treeWilsonBalding" tree="@tree" weight="3.0"/>-->
+            <operator spec="Exchange" id="treeWideExchange" isNarrow="true" tree="@tree" weight="15.0"/>
+            <!-- JBC: entirely removing WilsonBalding, whose acceptance rate remains very low, even with a large weight -->
+            <!--<operator spec="WilsonBalding" id="treeWilsonBalding" tree="@tree" weight="10.0"/>-->
+            <!-- Operators for the Birth-Death Skyline model -->
+            <operator spec="BactrianScaleOperator" id="originScaler" parameter="@origin" scaleFactor="0.02" weight="5.0"/>
+            <operator spec="BactrianScaleOperator" id="birthRate1Scaler" parameter="@birthRate.1" weight="1.0" scaleFactor="0.200"/>
+            <operator spec="BactrianScaleOperator" id="birthRate2Scaler" parameter="@birthRate.2" weight="1.0" scaleFactor="0.125"/>
+            <operator spec="BactrianScaleOperator" id="birthRate3Scaler" parameter="@birthRate.3" weight="1.0" scaleFactor="0.125"/>
+            <operator spec="BactrianScaleOperator" id="birthRate4Scaler" parameter="@birthRate.4" weight="1.0" scaleFactor="0.125"/>
+            <operator spec="BactrianScaleOperator" id="deathRate1Scaler" parameter="@deathRate.1" weight="1.0" scaleFactor="0.360"/>
+            <operator spec="BactrianScaleOperator" id="deathRate2Scaler" parameter="@deathRate.2" weight="1.0" scaleFactor="0.353"/>
+            <operator spec="BactrianScaleOperator" id="deathRate3Scaler" parameter="@deathRate.3" weight="1.0" scaleFactor="0.288"/>
+            <operator spec="BactrianScaleOperator" id="deathRate4Scaler" parameter="@deathRate.4" weight="1.0" scaleFactor="0.662"/>
+            <operator spec="BactrianScaleOperator" id="samplingRateScaler" parameter="@samplingRate" weight="5.0" scaleAll="true"/>
+            <!-- Operators for the clock model -->
+            <operator spec="BactrianScaleOperator" id="clockRateScaler" scaleFactor="0.05" parameter="@clockRate" weight="10.0"/>
+            <!-- Start intrinsic odds operators -->
+            
+            <!-- Start transcriptional rate operators -->
+            <operator spec="BactrianScaleOperator" id="scaler.lexsemstrong_rate" scaleFactor="0.5" parameter="@lexsemstrong_rate" weight="4.0"/>
+            <operator spec="BactrianScaleOperator" id="scaler.lexsemweak_rate" scaleFactor="0.5" parameter="@lexsemweak_rate" weight="4.0"/>
+            <operator spec="BactrianScaleOperator" id="scaler.lexsemnonsense_rate" scaleFactor="0.5" parameter="@lexsemnonsense_rate" weight="4.0"/>
+            <operator spec="BactrianScaleOperator" id="scaler.order_rate" scaleFactor="0.5" parameter="@order_rate" weight="4.0"/>
+            <operator spec="BactrianScaleOperator" id="scaler.absence_rate" scaleFactor="0.5" parameter="@absence_rate" weight="4.0"/>
+            <!-- Start witness date operators -->
+            <operator spec="TipDatesRandomWalker" id="dateOperator.A" windowSize="15" taxonset="@taxonSet.A" tree="@tree" weight="1.0"/>
+            <operator spec="TipDatesRandomWalker" id="dateOperator.B" windowSize="25" taxonset="@taxonSet.B" tree="@tree" weight="1.0"/>
+            <operator spec="TipDatesRandomWalker" id="dateOperator.C" windowSize="10" taxonset="@taxonSet.C" tree="@tree" weight="1.0"/>
+            <operator spec="TipDatesRandomWalker" id="dateOperator.R" windowSize="20" taxonset="@taxonSet.R" tree="@tree" weight="1.0"/>
+            <operator spec="TipDatesRandomWalker" id="dateOperator.S" windowSize="2" taxonset="@taxonSet.S" tree="@tree" weight="1.0"/>
+            <logger spec="Logger" id="tracelog" fileName="beast.log" logEvery="1000" model="@posterior" sanitiseHeaders="true" sort="smart">
+                <log idref="posterior"/>
+                <log idref="likelihood"/>
+                <log idref="prior"/>
+                <log spec="TreeHeightLogger" id="treeHeight" tree="@tree"/>
+                <log idref="birthDeath"/>
+                <log idref="origin"/>
+                <log idref="birthRate.1"/>
+                <log idref="birthRate.2"/>
+                <log idref="birthRate.3"/>
+                <log idref="birthRate.4"/>
+                <log idref="deathRate.1"/>
+                <log idref="deathRate.2"/>
+                <log idref="deathRate.3"/>
+                <log idref="deathRate.4"/>
+                <log idref="samplingRate"/>
+                <log spec="RateStatistic" id="rate" branchratemodel="@clock" tree="@tree"/>
+                <log idref="clockRate"/>
+                <!-- Start intrinsic odds loggers -->
+                
+                <!-- Start transcriptional rate loggers -->
+                <log idref="lexsemstrong_rate"/>
+                <log idref="lexsemweak_rate"/>
+                <log idref="lexsemnonsense_rate"/>
+                <log idref="order_rate"/>
+                <log idref="absence_rate"/>
+                <!-- Start witness date loggers -->
+                <log idref="date.A"/>
+                <log idref="date.B"/>
+                <log idref="date.C"/>
+                <log idref="date.R"/>
+                <log idref="date.S"/>
+            </logger>
+        <logger spec="Logger" id="screenlog" logEvery="1000">
+            <log idref="posterior"/>
+            <log idref="likelihood"/>
+            <log idref="prior"/>
+        </logger>
+        <logger spec="Logger" id="treelog" fileName="$(tree).trees" logEvery="1000" mode="tree">
+            <log spec="TreeWithMetaDataLogger" id="treeWithMetaDataLogger" branchratemodel="@clock" tree="@tree"/>
+        </logger>
+        <operatorschedule spec="OperatorSchedule" id="operatorSchedule"/>
+        <logger id="ancestralStateLogger" fileName="$(tree).ancestral.trees" logEvery="1000" mode="tree">
+            <!-- Start character ancestral state loggers -->
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.1.anclogger" value="site.1" data="@filter.1" taxonset="@taxa" siteModel="@morphSiteModel.1" rootFrequencies="@rootfreqs.1" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.2.anclogger" value="site.2" data="@filter.2" taxonset="@taxa" siteModel="@morphSiteModel.2" rootFrequencies="@rootfreqs.2" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.3.anclogger" value="site.3" data="@filter.3" taxonset="@taxa" siteModel="@morphSiteModel.3" rootFrequencies="@rootfreqs.3" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.4.anclogger" value="site.4" data="@filter.4" taxonset="@taxa" siteModel="@morphSiteModel.4" rootFrequencies="@rootfreqs.4" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.5.anclogger" value="site.5" data="@filter.5" taxonset="@taxa" siteModel="@morphSiteModel.5" rootFrequencies="@rootfreqs.5" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.6.anclogger" value="site.6" data="@filter.6" taxonset="@taxa" siteModel="@morphSiteModel.6" rootFrequencies="@rootfreqs.6" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.7.anclogger" value="site.7" data="@filter.7" taxonset="@taxa" siteModel="@morphSiteModel.7" rootFrequencies="@rootfreqs.7" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.8.anclogger" value="site.8" data="@filter.8" taxonset="@taxa" siteModel="@morphSiteModel.8" rootFrequencies="@rootfreqs.8" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.9.anclogger" value="site.9" data="@filter.9" taxonset="@taxa" siteModel="@morphSiteModel.9" rootFrequencies="@rootfreqs.9" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.10.anclogger" value="site.10" data="@filter.10" taxonset="@taxa" siteModel="@morphSiteModel.10" rootFrequencies="@rootfreqs.10" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.11.anclogger" value="site.11" data="@filter.11" taxonset="@taxa" siteModel="@morphSiteModel.11" rootFrequencies="@rootfreqs.11" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.12.anclogger" value="site.12" data="@filter.12" taxonset="@taxa" siteModel="@morphSiteModel.12" rootFrequencies="@rootfreqs.12" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.13.anclogger" value="site.13" data="@filter.13" taxonset="@taxa" siteModel="@morphSiteModel.13" rootFrequencies="@rootfreqs.13" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.14.anclogger" value="site.14" data="@filter.14" taxonset="@taxa" siteModel="@morphSiteModel.14" rootFrequencies="@rootfreqs.14" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.15.anclogger" value="site.15" data="@filter.15" taxonset="@taxa" siteModel="@morphSiteModel.15" rootFrequencies="@rootfreqs.15" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.16.anclogger" value="site.16" data="@filter.16" taxonset="@taxa" siteModel="@morphSiteModel.16" rootFrequencies="@rootfreqs.16" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.17.anclogger" value="site.17" data="@filter.17" taxonset="@taxa" siteModel="@morphSiteModel.17" rootFrequencies="@rootfreqs.17" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.18.anclogger" value="site.18" data="@filter.18" taxonset="@taxa" siteModel="@morphSiteModel.18" rootFrequencies="@rootfreqs.18" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.19.anclogger" value="site.19" data="@filter.19" taxonset="@taxa" siteModel="@morphSiteModel.19" rootFrequencies="@rootfreqs.19" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.20.anclogger" value="site.20" data="@filter.20" taxonset="@taxa" siteModel="@morphSiteModel.20" rootFrequencies="@rootfreqs.20" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.21.anclogger" value="site.21" data="@filter.21" taxonset="@taxa" siteModel="@morphSiteModel.21" rootFrequencies="@rootfreqs.21" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.22.anclogger" value="site.22" data="@filter.22" taxonset="@taxa" siteModel="@morphSiteModel.22" rootFrequencies="@rootfreqs.22" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.23.anclogger" value="site.23" data="@filter.23" taxonset="@taxa" siteModel="@morphSiteModel.23" rootFrequencies="@rootfreqs.23" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.24.anclogger" value="site.24" data="@filter.24" taxonset="@taxa" siteModel="@morphSiteModel.24" rootFrequencies="@rootfreqs.24" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.25.anclogger" value="site.25" data="@filter.25" taxonset="@taxa" siteModel="@morphSiteModel.25" rootFrequencies="@rootfreqs.25" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+            <log spec="beastlabs.evolution.likelihood.AncestralStateLogger" id="morphTreeLikelihood.character.26.anclogger" value="site.26" data="@filter.26" taxonset="@taxa" siteModel="@morphSiteModel.26" rootFrequencies="@rootfreqs.26" branchRateModel="@clock" tree="@tree" useAmbiguities="true" useTipLikelihoods="true"/>
+        </logger>
+    </run>
+</beast>

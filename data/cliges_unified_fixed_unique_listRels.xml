@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Cliges</title>
+            <author>Chrétien de Troyes</author>
+            <respStmt>
+               <resp>Collated by</resp>
+               <persName instant="false" full="yes">
+                  <forename full="yes">Benedetta</forename>
+                  <surname full="yes">Salvati</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p part="N">Sample of a private working document</p>
+         </publicationStmt>
+         <sourceDesc default="false">
+            <!-- Description of the work (including a date range of origin) whose manuscript tradition is detailed below -->
+            <bibl default="false" status="draft">
+               <title xml:lang="fro">Cliges</title>
+               <date notBefore="1172" notAfter="1181" instant="false"/>
+            </bibl>
+            <listWit>
+               <witness xml:id="A" n="A">
+                  <origDate notBefore="1226" notAfter="1235" instant="false"/>
+               </witness>
+               <witness xml:id="B" n="B">
+                  <origDate notBefore="1226" notAfter="1250" instant="false"/>
+               </witness>
+               <witness xml:id="P" n="P">
+                  <origDate notBefore="1288" notAfter="1288" instant="false"/>
+               </witness>
+               <witness xml:id="C" n="C">
+                  <origDate notBefore="1241" notAfter="1260" instant="false"/>
+               </witness>
+               <witness xml:id="R" n="R">
+                  <origDate notBefore="1201" notAfter="1260" instant="false"/>
+               </witness>
+               <witness xml:id="S" n="S">
+                  <origDate notBefore="1201" notAfter="1250" instant="false"/>
+               </witness>
+               <witness xml:id="T" n="T">
+                  <origDate notBefore="1301" notAfter="1360" instant="false"/>
+               </witness>
+               <witness xml:id="M" n="M">
+                  <origDate notBefore="1201" notAfter="1220" instant="false"/>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <interpGrp type="intrinsic">
+         <interp xml:id="RatingA">
+            <p>The current reading is absolutely more likely than the linked reading.</p>
+            <certainty locus="value" degree="100"/>
+         </interp>
+         <interp xml:id="RatingB">
+            <p>The current reading is strongly more likely than the linked reading.</p>
+            <certainty locus="value" degree="31.622776601683793"/>
+         </interp>
+         <interp xml:id="RatingC">
+            <p>The current reading is more likely than the linked reading.</p>
+            <certainty locus="value" degree="10"/>
+         </interp>
+         <interp xml:id="RatingD">
+            <p>The current reading is slightly more likely than the linked reading.</p>
+            <certainty locus="value" degree="3.1622776601683795"/>
+         </interp>
+         <interp xml:id="EqualRating">
+            <p>The current reading and the linked reading are equally likely.</p>
+            <certainty locus="value" degree="1"/>
+         </interp>
+      </interpGrp>
+      <interpGrp type="transcriptional">
+         <interp xml:id="lexsemstrong">
+            <p>Strong lexical and semantic variation.</p>
+         </interp>
+         <interp xml:id="lexsemweak">
+            <p/>
+         </interp>
+         <interp xml:id="lexsemnonsense">
+            <p/>
+         </interp>
+         <interp xml:id="order">
+            <p/>
+         </interp>
+         <interp xml:id="absence">
+            <p/>
+         </interp>
+      </interpGrp>
+      <!--
+         <app>	@ana1	signif  | indif | unknown (S|I|U)	trier les phénomènes intéressants
+         <app>	@ana2	mono | poly | unknown (M|P|U)	isoler innovations monogénétiques
+         <app>	@ana3	conj | sep | none (C|S|N)	partitions conjonctif/séparatif
+         <app>	@type	graphemic | morphologic | morphosyntactic | lexsem:weak,strong,nonsense | absence,order etc.	trier par domaine
+         <lem>	@cert	high | medium | low | 0	filtrer les sites selon la fiabilité du texte établi
+         <rdg>	@cause	paleo | homt | ditt | normalisation | banalisation | other	cause/genèse de l’innovation 
+         <rdg>	@cause:	high | medium | low	filtrer les valeurs causales incertaines
+         <rdg>	@resp/@VarSeq	scribe | archetype | subarchetype | editor | unknown	niveau d’attribution de l’innovation
+      -->
+      <body>
+         <l xml:id="l-1" part="N">Cil qui fist d'Erec et d'Enide</l>
+         <l xml:id="l-2" part="N">
+            les d'Ovide </l>
+         <l xml:id="l-3" part="N">
+            l'Art d' 
+            mist </l>
+         <l xml:id="l-4" part="N">Et le mors de l' fist, </l>
+         <l xml:id="l-5" part="N">
+            roi Marc et d' La Blonde </l>
+         <l xml:id="l-6" part="N">Et de la et de l' 
+         </l>
+         <l xml:id="l-7" part="N">Et 
+            la muance, </l>
+         <l xml:id="l-8" part="N">
+            <!-- JBC: weak or strong? -->
+            conte 
+         </l>
+         <l xml:id="l-9" part="N">D'un qui 
+            fu </l>
+         <l xml:id="l-10" part="N">
+            le roi . </l>
+         <l xml:id="l-11" part="N">
+            , </l>
+         <l xml:id="l-12" part="N">
+            de son pere la vie : </l>
+         <l xml:id="l-13" part="N">
+            il fu et de quel . </l>
+         <l xml:id="l-14" part="N">Tant fu et de <app xml:id="l-14_2" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #C" varSeq="0" cert="medium">haut</rdg>
+               <rdg n="2" wit="#A #B #R #S" varSeq="1">fier</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingB #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            <app xml:id="l-14_3" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #C" varSeq="0" cert="medium">parage</rdg>
+               <rdg n="2" wit="#A #B #R #S" varSeq="1">corage</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingB #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-15" part="N">Que, por pris et por los , </l>
+         <l xml:id="l-16" part="N">Ala de 
+            , </l>
+         <l xml:id="l-17" part="N">
+            lors estoit dite. </l>
+         <l xml:id="l-18" part="N">Ceste estoire escrite, </l>
+         <l xml:id="l-19" part="N">Que conter <app xml:id="l-19_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #P #S #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#C" varSeq="1">m'oez</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            , </l>
+         <l xml:id="l-20" part="N">En .i. des livres de l' 
+         </l>
+         <l xml:id="l-21" part="N">Mon Saint a : </l>
+         <l xml:id="l-22" part="N">De la fu 
+         </l>
+         <l xml:id="l-23" part="N">
+            . </l>
+         <l xml:id="l-24" part="N">
+         </l>
+         <l xml:id="l-25" part="N">Qui l' a voire : </l>
+         <l xml:id="l-26" part="N">
+            a . </l>
+         <l xml:id="l-27" part="N">Par les livres que 
+         </l>
+         <l xml:id="l-28" part="N">Les 
+            anciens 
+         </l>
+         <l xml:id="l-29" part="N">
+            <!-- JBC: app avec une seule leçon? -->
+            <!--  
+                                    <app xml:id="l-29_2">
+                                       <rdg wit="#A #B #C #P #R #S">
+                                          <app xml:id="l-29_3" type="lexsem:weak" subtype="grammeme">
+                                             <rdg wit="#A #B #C #P #R">
+                                                <app xml:id="l-29_4">
+                                                   <rdg wit="#P #A #B #R">del</rdg>
+                                                   <rdg wit="#C">dou</rdg>
+                                                </app>
+                                             </rdg>
+                                             <rdg wit="#S" cause="segmentation">dune</rdg>
+                                          </app>
+                                          <app xml:id="l-29_5" type="lexsem:nonsense">
+                                             <rdg wit="#A #B #C #P #R">
+                                                <app xml:id="l-29_6">
+                                                   <rdg wit="#B #C #P #R">siecle</rdg>
+                                                   <rdg wit="#A">siegle</rdg>
+                                                </app>
+                                             </rdg>
+                                             <rdg wit="#S">cle</rdg>
+                                          </app>
+                                       </rdg>
+                                    </app> -->qui fu jadis. </l>
+         <l xml:id="l-30" part="N">
+            <app xml:id="l-30_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #C #R #S" varSeq="0" cert="high">Ce</rdg>
+               <rdg n="2" wit="#P" varSeq="1">Or</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            <!-- JBC: should we treat simple variation on the marker of the subject case as a morphologic or
+                                    morphosyntactic issue? Or distinguish according to known alternance markers (like ber/barons) vs. 
+                                    not typical alternances?
+                                    -->
+            : </l>
+         <l xml:id="l-31" part="N">
+            de 
+         </l>
+         <l xml:id="l-32" part="N">Le los et de clergie ; </l>
+         <l xml:id="l-33" part="N">Puis vint a Rome </l>
+         <l xml:id="l-34" part="N">
+            de 
+            , </l>
+         <l xml:id="l-35" part="N">
+            est France venue : </l>
+         <l xml:id="l-36" part="N">
+            qu'ele i 
+         </l>
+         <l xml:id="l-37" part="N">
+            que li li 
+         </l>
+         <l xml:id="l-38" part="N">
+            que de France n'isse </l>
+         <l xml:id="l-39" part="N">L' 
+            est arestee. </l>
+         <l xml:id="l-40" part="N">
+            <app xml:id="l-40_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #C #P #R" varSeq="0" cert="high">
+                  l'avoit 
+                  <app xml:id="l-40_4" type="lexsem:strong" ana="#lexsemstrong">
+                     <rdg n="1" wit="#P #R" varSeq="0" cert="high">
+                     </rdg>
+                     <rdg n="2" wit="#A #B" varSeq="1">
+                     </rdg>
+                     <note>
+                        <listRelation type="intrinsic">
+                           <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                        </listRelation>
+                     </note>
+                  </app>
+                  <app xml:id="l-40_7" type="lexsem:strong" ana="#lexsemstrong">
+                     <rdg n="1" wit="#A #C #R" varSeq="0" cert="high">prestee</rdg>
+                     <rdg n="2" wit="#P" varSeq="1" cert="medium">donee</rdg>
+                     <rdg n="3" wit="#B" varSeq="2" cert="low">paree</rdg>
+                     <note>
+                        <listRelation type="intrinsic">
+                           <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                           <relation active="2" passive="3" ana="#RatingB #lexsemstrong"/>
+                        </listRelation>
+                     </note>
+                  </app>
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1">dont ele est prisee et dotee</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <!-- comment traiter ces cas-ci ? réfection d'un vers, mais mot à la rime identique/similaire (faute lecture du 
+                                 copiste de S) -->
+         <l xml:id="l-41" part="N">
+            <app xml:id="l-41_4" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #C #P #R #S" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#B" varSeq="1">francois</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>ne Romains </l>
+         <l xml:id="l-42" part="N">Ne 
+            ne plus ne : </l>
+         <l xml:id="l-43" part="N">D' est parole 
+         </l>
+         <l xml:id="l-44" part="N">
+            la vive . </l>
+         <l xml:id="l-45" part="N">
+            son conte </l>
+         <l xml:id="l-46" part="N">Si 
+            <app xml:id="l-46_3" type="lexsem:strong" ana="mono:sep">
+               <rdg n="1" wit="#A #B #P" varSeq="0" cert="high">livres</rdg>
+               <rdg n="2" wit="#C #R #S" varSeq="1">estoire</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-47" part="N">
+            <!-- JBC: je recode avec présence/absence -->
+            <!--<app xml:id="l-47_3" type="morphosyntactic">
+                                       <rdg wit="#P #B #S">
+                                          <app xml:id="l-47_4">
+                                             <rdg wit="#P #B">traite</rdg>
+                                             <rdg wit="#S">trete</rdg>
+                                          </app>
+                                       </rdg>
+                                       <rdg wit="#A #C #R">
+                                          <app xml:id="l-47_5">
+                                             <rdg wit="#A">trez</rdg>
+                                             <rdg wit="#C #R">traite</rdg>
+                                          </app>
+                                          <app xml:id="l-47_6" type="morphosyntactic">
+                                             <rdg wit="#A">fu</rdg>
+                                             <rdg wit="#C #R">est</rdg>
+                                          </app>
+                                       </rdg>
+                                    </app>-->
+            d'un empereor, </l>
+         <l xml:id="l-48" part="N">
+            de et d' , </l>
+         <l xml:id="l-49" part="N">Qui tint et Constantinoble. </l>
+         <l xml:id="l-50" part="N">
+            i 
+            <app xml:id="l-50_3" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#B #C #R #P #S" varSeq="0" cert="high">molt</rdg>
+               <rdg n="2" wit="#A" varSeq="1">cointe et</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>noble, </l>
+         <l xml:id="l-51" part="N">Dont l' ot 
+            . </l>
+         <l xml:id="l-52" part="N">
+            fu li premiers si 
+         </l>
+         <l xml:id="l-53" part="N">Que li autres 
+            , </l>
+         <l xml:id="l-54" part="N">Que li , 
+            pleüst, </l>
+         <l xml:id="l-55" part="N">
+            devenir </l>
+         <l xml:id="l-56" part="N">Et tot 
+            . </l>
+         <l xml:id="l-57" part="N">Li premiers non Alixandres ; </l>
+         <l xml:id="l-58" part="N">
+            fu li . </l>
+         <l xml:id="l-59" part="N">
+            ot non li 
+         </l>
+         <l xml:id="l-60" part="N">
+            <!-- JBC: check nonsense type -->
+            ot non mere. </l>
+         <l xml:id="l-61" part="N">De l' 
+            <app xml:id="l-61_3" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #A #B #C" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1" cert="high">cantal</rdg>
+               <rdg n="3" wit="#R" varSeq="2">et d'aliz</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                     <relation active="2" passive="3" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-62" part="N">
+            De l' 
+            <!-- JBC: vérifier ce type -->
+         </l>
+         <l xml:id="l-63" part="N">La parole 
+            . </l>
+         <l xml:id="l-64" part="N">
+            <app xml:id="l-64_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #C #P #S" varSeq="0" cert="high">D' 
+               </rdg>
+               <rdg n="2" wit="#R" varSeq="1">et apres</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>vos 
+         </l>
+         <l xml:id="l-65" part="N">Qui tant fu <app xml:id="l-65_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #C #B #R #S" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#P" varSeq="1">orgilleus</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>et fiers </l>
+         <l xml:id="l-66" part="N">
+            ne 
+         </l>
+         <l xml:id="l-67" part="N">Devenir 
+            region. </l>
+         <l xml:id="l-68" part="N">
+            <!-- JBC: not sure of the type, could be graphemic -->
+         </l>
+         <l xml:id="l-69" part="N">
+            roi , qui 
+            <app xml:id="l-69_4" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #P #B #C #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1">vivoit</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>, </l>
+         <l xml:id="l-70" part="N">
+            des 
+            tenoit </l>
+         <l xml:id="l-71" part="N">
+            sa 
+            , </l>
+         <l xml:id="l-72" part="N">
+            <app xml:id="l-72_7" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #C #P #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1">renome</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            sa <app xml:id="l-72_10" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #B #A #C #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1">torz</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-73" part="N">
+            . </l>
+         <l xml:id="l-74" part="N">
+            <app xml:id="l-74_2" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #A #B #C #R" varSeq="0" cert="high">que la fin</rdg>
+               <rdg n="2" wit="#S" cause="paleo" varSeq="1">quel ains</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            responde </l>
+         <l xml:id="l-75" part="N">Et 
+            en 
+         </l>
+         <l xml:id="l-76" part="N">N'est 
+            <!-- JBC: je dirais fort (ou nonsense) mais pas faible? -->
+            qui 
+         </l>
+         <l xml:id="l-77" part="N">
+            <app xml:id="l-77_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1"
+                    wit="#B #C #R #P #S"
+                    xml:id="l-77_t-1"
+                    varSeq="0"
+                    cert="high">
+               </rdg>
+               <rdg n="2" wit="#A" varSeq="1">el mont</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            <app xml:id="l-77_12" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #P #C #R #S" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#B" varSeq="1" corresp="#l-77_t-2">alt</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+            . </l>
+         <l xml:id="l-78" part="N">
+            <app xml:id="l-78_3" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #C #R #S #P" varSeq="0" cert="high">est 
+               </rdg>
+               <rdg n="2" wit="#B" varSeq="1">convient</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>que congié 
+         </l>
+         <l xml:id="l-79" part="N">A son 
+            il s' 
+            <app xml:id="l-79_4" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #A #B #C #R" varSeq="0" cert="high">aille</rdg>
+               <rdg n="2" wit="#S" cause="paleo" varSeq="1">able</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-80" part="N">
+            . </l>
+         <l xml:id="l-81" part="N">Por congié et demander </l>
+         <l xml:id="l-82" part="N">
+            a l'empereor 
+         </l>
+         <l xml:id="l-83" part="N">
+            , li li : </l>
+         <l xml:id="l-84" part="N">
+            li 
+            <app xml:id="l-84_6" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #B #A #C #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" cause="paleo" varSeq="1">vieuz</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-85" part="N">
+            <!-- JBC: not merely graphemic? -->
+            <app xml:id="l-85_7" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #B #C #R #P" varSeq="0" cert="high">et 
+               </rdg>
+               <rdg n="2" wit="#S" cause="paleo" varSeq="1">canpandre</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>. </l>
+         <l xml:id="l-86" part="N">
+            pere, por 
+         </l>
+         <l xml:id="l-87" part="N">
+            por conquerre pris los, </l>
+         <l xml:id="l-88" part="N">.i. don, il, vos os, </l>
+         <l xml:id="l-89" part="N">Que 
+            que vos me : </l>
+         <l xml:id="l-90" part="N">Ne ja 
+            , </l>
+         <l xml:id="l-91" part="N">Se le me . </l>
+         <l xml:id="l-92" part="N">
+            estre <app xml:id="l-92_8" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#A #C #R #P #B" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#S" varSeq="1">crevez</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>
+         </l>
+         <l xml:id="l-93" part="N">L' , ne ne bien : </l>
+         <l xml:id="l-94" part="N">L' son fil 
+            rien </l>
+         <l xml:id="l-95" part="N">
+            <app xml:id="l-95_1" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #A #C #R" varSeq="0" cert="high">Doit</rdg>
+               <rdg n="2" wit="#B" varSeq="1" cert="high">velt</rdg>
+               <rdg n="3" wit="#S" varSeq="2">voit</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                     <relation active="2" passive="3" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>il <app xml:id="l-95_2" type="lexsem:strong" ana="#lexsemstrong">
+               <rdg n="1" wit="#P #A #C #S #R" varSeq="0" cert="high">
+               </rdg>
+               <rdg n="2" wit="#B" varSeq="1">amer</rdg>
+               <note>
+                  <listRelation type="intrinsic">
+                     <relation active="1" passive="2" ana="#RatingA #lexsemstrong"/>
+                  </listRelation>
+               </note>
+            </app>et . </l>
+         <l xml:id="l-96" part="N">Molt bien ; </l>
+         <l xml:id="l-97" part="N">
+         </l>
+         <l xml:id="l-98" part="N">S'il l' son fil. </l>
+         <l xml:id="l-99" part="N">
+            , 
+            , vos 
+         </l>
+         <l xml:id="l-100" part="N">Vostre et dites moi </l>
+      </body>
+   </text>
+</TEI>
